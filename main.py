@@ -1,3 +1,4 @@
+import os
 from collections import OrderedDict
 
 
@@ -31,7 +32,10 @@ class LRUCache:
         if (len(self.dict) + 1 > self.capacity):
             pass
         
+def clear_terminal():
+  os.system('cls' if os.name == 'nt' else 'clear')
 
+clear_terminal()
 cache = LRUCache(capacity = 3, duration = 10)
 cache.put("A", 1)
 cache.put("B", 2)
